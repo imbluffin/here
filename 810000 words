@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .word {
+    font-family: monospace;
+    white-space: pre;
+  }
+</style>
+</head>
+<body>
+<div class="word">
+  <pre>
+    <!-- Aquí generamos las 810,000 palabras -->
+    <!-- Reemplaza '810000' con el número deseado de palabras -->
+    <!-- Reemplaza '4' con la longitud deseada de las palabras -->
+    <!-- Puedes ajustar el tamaño de fuente y otros estilos según tus preferencias -->
+    <!-- Asegúrate de mantener el formato de las letras personalizadas -->
+    <!-- según el orden del "alfabeto personalizado" que has proporcionado -->
+
+    <?php
+      $alphabet = array(
+        'a', 'ã', 'b', 'c', 'ç', 'd', 'e', 'f', 'g', 'h',
+        'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q',
+        'r', 's', 'ß', 't', 'u', 'v', 'w', 'x', 'y', 'z'
+      );
+
+      $wordCount = 810000;
+      $wordLength = 4;
+
+      $index = 0;
+      for ($i = 0; $i < $wordCount; $i++) {
+        for ($j = 0; $j < $wordLength; $j++) {
+          echo $alphabet[$index];
+          $index = ($index + 1) % count($alphabet);
+        }
+        echo "\n";
+      }
+    ?>
+  </pre>
+</div>
+</body>
+</html>
